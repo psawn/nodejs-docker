@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "name": "nodejs-docker",
+  "version": "1.0.0",
+  "description": "NodeJS-Docker",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psawn/nodejs-docker.git"
+  },
+  "author": "Doan Duc Bao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/psawn/nodejs-docker/issues"
+  },
+  "homepage": "https://github.com/psawn/nodejs-docker#readme"
+}
