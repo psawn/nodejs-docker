@@ -10,12 +10,19 @@ services:
       - "db:db"
     depends_on:
       - db
+    # command: ["node", "app.js"] can change command from Dockerfile to docker-compose
 
   db:
-    image: postgres:14.4
-    environment:
-      - "POSTGRES_USER=dbuser"
-      - "POSTGRES_PASSWORD=dbpass2022"
-      - "POSTGRES_DB=testdb"
+    # image: postgres:14.4
+    build:
+      context: ./db
+      dockerfile: Dockerfile-db
+    # environment:
+    #   - "POSTGRES_USER=${POSTGRES_USER}"
+    #   - "POSTGRES_PASSWORD=${POSTGRES_PASSWORD}"
+    #   - "POSTGRES_DB=${POSTGRES_DB}"
+    # env_file:
+    #   - ./db/.env.db
+    # //docker-compose --env-file ./db/.env.db up --build -d thay cho eviroment hoặc env_file
     volumes:
       - "./db/init.sql:/docker-entrypoint-initdb.d/init.sql"
