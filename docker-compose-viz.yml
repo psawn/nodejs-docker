@@ -14,6 +14,7 @@ services:
       - app
     deploy:
       replicas: 3
+      # allow 3 instances of service to be deployed
 
   db:
     image: postgres:14.4
@@ -36,3 +37,4 @@ services:
       - app
 networks:
   app:      
+  # told the Docker swarm to create a network named app so that it can be used by the services.
